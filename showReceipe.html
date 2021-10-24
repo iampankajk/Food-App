@@ -12,6 +12,9 @@
 <body>
     <div id="nav">
     </div>
+    <div id="showfood">
+
+    </div>
 
 </body>
 
@@ -70,3 +73,11 @@
 </script>
 
 <script src="searchScript.js"></script>
+
+<script type="module">
+    import showReceipe from "./scripts/showReceipe.js";
+
+    let food = JSON.parse(localStorage.getItem("receipe"));
+    showReceipe(food);
+
+</script>

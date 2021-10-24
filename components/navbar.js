@@ -11,8 +11,8 @@ function navbar(){
                 <a href="search.html"><button>Home</button></a>
             </li>
         </ul>
-        <h1>Zomato</h1>
-        <h3>Discover the best food & drinks in Delhi NCR</h3>
+        <h1>Zomato Food Receipe</h1>
+        <h3>Discover the best food receipe & drinks in Delhi NCR</h3>
 
         <div class="searchbox">
             <div id="locationimg"><img
@@ -31,7 +31,9 @@ function navbar(){
                     alt=""></div>
             <div>
                 <input type="text" id="searchFood" placeholder="Search Food" oninput="debounce(main,1000)">
+                <div id="foods"></div>
             </div>
+            
 
         </div>`;
 }

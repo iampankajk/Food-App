@@ -4,4 +4,8 @@ async function searchReceipe(url){
     return receipe;
 }
 
+
+
+
+
 export default searchReceipe

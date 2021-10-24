@@ -89,3 +89,10 @@ h3{
     margin-left: 5px;
 }
 
+#flexdiv{
+    display: flex;
+    width: 1200px;
+    margin: auto;
+    gap: 50px;
+}
+
