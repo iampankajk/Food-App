@@ -1,0 +1,42 @@
+#showfood{
+    margin-top: 0px;
+    padding-top: 10px;
+    background-image:linear-gradient(to right, #ce1616, #9c0c0c);
+    color: white;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', 'Geneva', Verdana, sans-serif;
+
+}
+
+#flexdiv{
+    display: flex;
+    width: 800px;
+    margin: auto;
+    gap: 50px;
+   
+}
+
+#flexdiv>img{
+    width: 300px;
+    border-radius: 10px;
+   
+}
+
+
+li{
+    margin: 5px;
+}
+
+.p{
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+h2,h4{
+    text-align: center;
+}
+
+#inst{
+    text-decoration: none;
+    padding: 5px;
+    font-size: 18px;
+}

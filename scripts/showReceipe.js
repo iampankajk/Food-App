@@ -1,17 +1,30 @@
 function showReceipe(food){
 
     let div  = document.createElement("div");
+
+    let h2 =document.createElement("h2");
+    h2.innerText = "Receipe: " + food.strMeal;
+    
+    let area = document.createElement("h4");
+    area.innerText = "Area: " + food.strArea;
+
+    let category = document.createElement("h4");
+    category.innerText = "Category: " + food.strCategory;
+
+    
     
     let flex_div = document.createElement("div");
     flex_div.setAttribute("id","flexdiv");
 
-
-    let url = food.strYoutube
-    console.log(url);
     let showfood = document.getElementById("showfood");
-    let video = document.createElement('video');
-    video.src= url;
-    video.setAttribute("controls","controls");
+
+    let img  = document.createElement("img");
+    img.src = food.strMealThumb;
+
+    let ip = document.createElement("p");
+    ip.innerText="Ingredients";
+
+    ip.setAttribute("class","p");
 
     let ul1 = document.createElement("ul");
 
@@ -36,8 +49,12 @@ function showReceipe(food){
     let li10 = document.createElement("li");
     li10.innerText = food.strIngredient10
 
-    ul1.append(li1,li2,li3,li4,li5,li6,li7,li8,li9,li10);
+    ul1.append(ip,li1,li2,li3,li4,li5,li6,li7,li8,li9,li10);
 
+    let mp = document.createElement("p");
+    mp.innerText="Measures";
+
+    mp.setAttribute("class","p");
 
     let ul2 = document.createElement("ul");
 
@@ -62,11 +79,23 @@ function showReceipe(food){
     let Mli10 = document.createElement("li");
     Mli10.innerText = food.strMeasure10
 
-    ul2.append(Mli1,Mli2,Mli3,Mli4,Mli5,Mli6,Mli7,Mli8,Mli9,Mli10);
+    ul2.append(mp,Mli1,Mli2,Mli3,Mli4,Mli5,Mli6,Mli7,Mli8,Mli9,Mli10);
 
-    flex_div.append(video,ul1,ul2)
+    let ih2 =document.createElement("h2");
+    ih2.innerText = "Receipe Instructions";
 
-    showfood.append(flex_div);
+    let inst = document.createElement("p");
+    inst.innerText = food.strInstructions;
+    inst.setAttribute("id","inst");
+
+
+    div.style.width="800px";
+    div.style.margin="auto";
+    flex_div.append(img,ul1,ul2)
+
+    div.append(h2,area,category,flex_div,ih2,inst);
+
+    showfood.append(div);
 }
 
 export default showReceipe;
