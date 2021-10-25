@@ -2,6 +2,9 @@ function navbar(){
     return `
     <ul id="li">
             <li>
+               <a href="receipeofday.html"><button>Day Receipe</button></a>
+            </li>
+            <li>
                 <a href="signup.html"><button>Sign Up</button></a>
             </li>
             <li>

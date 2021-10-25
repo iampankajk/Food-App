@@ -7,16 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Food_App</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="showReceipe.css">
 </head>
 
 <body>
     <div id="nav">
     </div>
-    <h2>Latest Receipe</h2>
-    <div id="latest">
-        
-    </div>
+    <h2>Receipe Of The Day</h2>
+    <div id="showfood">
 
+    </div>
+    
 </body>
 
 </html>
@@ -50,7 +51,7 @@
             window.appendSearchFood(res.meals[0]);
         })
 
-      
+
 
     }
     window.debounce = function (func, delay) {
@@ -67,19 +68,24 @@
     }
 
 
-    window.latestMeal = function(){
+       import showReceipe from "./scripts/showReceipe.js";
 
-        let response = searchReceipe(`https://www.themealdb.com/api/json/v1/1/categories.php`);
+        window.receipeOfday=function(){
+             let response = searchReceipe(`https://www.themealdb.com/api/json/v1/1/random.php`)
 
         response.then((res) => {
-            console.log(res);
-            window.appendLatest(res.categories);
+            console.log(res.meals[0]);
+            showReceipe(res.meals[0]);
         })
+        }
 
-    }
+        receipeOfday();
 
-    latestMeal();
+        
+
+        
 
 </script>
+
 
 <script src="searchScript.js"></script>

@@ -24,3 +24,30 @@ appendSearchFood = function (food) {
         foods_div.append(img,p);
     
 }
+
+
+appendLatest = function(foods){
+    for(let key in foods){
+        let latest = document.getElementById("latest");
+        let div = document.createElement("div");
+
+        
+
+        let name = document.createElement("p");
+        name.innerText = foods[key].strCategory;
+        
+        let img = document.createElement("img");
+        img.src = foods[key].strCategoryThumb;
+        img.style.width = "100%";
+
+        let des = document.createElement("p");
+        des.innerText = foods[key].strCategoryDescription;
+
+        div.append(img,name,des);
+
+        latest.append(div);
+
+    }
+
+}
+
